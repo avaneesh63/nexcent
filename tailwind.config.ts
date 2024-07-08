@@ -1,20 +1,12 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx}", // Include all JS and TS files in the pages directory
+    "./components/**/*.{js,ts,jsx,tsx}", // Include all JS and TS files in the components directory
+    "./app/**/*.{js,ts,jsx,tsx}", // If you're using the new App Directory in Next.js 13+
+    "./src/**/*.{js,ts,jsx,tsx}", // If your components are in a src directory
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 };
-export default config;
